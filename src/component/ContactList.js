@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 const ContactList = () => {
   const contactList = useSelector(state => state.contactList);
-  console.log(contactList)
   return (
     <div>
       <SearchBox />

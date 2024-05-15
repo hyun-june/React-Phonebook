@@ -1,3 +1,26 @@
 .title{
     text-align: center;
 }
+
+.male{
+    color: blue;
+}
+
+.female{
+    color:red;
+}
+
+.male, .female{
+    font-size: 20px;
+    background-color: white;
+    margin: 1em 0px;
+    border: none;
+}
+
+.male:hover, .female:hover{
+    background-color: beige;
+}
+
+.active {
+    
+}
