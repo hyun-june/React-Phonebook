@@ -17,10 +17,18 @@
     border: none;
 }
 
-.male:hover, .female:hover{
-    background-color: beige;
+.male:hover{
+    background-color: blue;
 }
 
-.active {
-    
+.male.active {
+    background-color: blue;
+}
+
+.female:hover{
+    background-color: red;
+}
+
+.female.active {
+    background-color: red;
 }
