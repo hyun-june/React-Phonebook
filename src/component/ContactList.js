@@ -7,11 +7,11 @@ const ContactList = () => {
   const contactList = useSelector(state => state.contactList);
   const searchNow = useSelector(state => state.searchNow);
   const filterList = contactList.filter(contact =>
-    contact.name.toLowerCase().includes(searchNow.toLowerCase())
+    contact.name.toLowerCase().includes(searchNow.toLowerCase())||
+    contact.phoneNumber.includes(searchNow)
   );
   return (
-    <div>
-      <SearchBox />
+    <div className="listcontact">
       {filterList.map(contact => (
         <ContactItem key={contact.id} item={contact} />
       ))}

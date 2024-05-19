@@ -1,34 +1,72 @@
-.title{
+.title {
     text-align: center;
-}
+  }
+  
+  .parent-container {
+    text-align: center;
+  }
 
-.male{
+  .maincontainer {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    height: 80vh; 
+    margin: 0 auto;
+    border: 3px solid red;
+  }
+  
+  .male {
     color: blue;
-}
-
-.female{
-    color:red;
-}
-
-.male, .female{
+  }
+  
+  .female {
+    color: red;
+  }
+  
+  .male,
+  .female {
     font-size: 20px;
     background-color: white;
     margin: 1em 0px;
     border: none;
-}
-
-.male:hover{
+  }
+  
+  .male:hover {
     background-color: blue;
-}
-
-.male.active {
+  }
+  
+  .male.active {
     background-color: blue;
-}
-
-.female:hover{
+  }
+  
+  .female:hover {
     background-color: red;
-}
-
-.female.active {
+  }
+  
+  .female.active {
     background-color: red;
-}
+  }
+  
+  .formcontact {
+    border: 2px solid black;
+  }
+  
+  .listcontact {
+    border: 2px solid black;
+  }
+  
+  .boxsearch {
+    position: relative;
+    align-items: center;
+    width: 30em;
+  }
+
+  .deletecontainer{
+    display: flex;
+    align-items: center;
+  }
+
+  #deletebtn{
+    border: none;
+    background-color: white;
+  }

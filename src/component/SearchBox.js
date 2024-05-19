@@ -11,11 +11,9 @@ const SearchBox = () => {
   }
 
   return (
-    <Row>
-        <Col lg={10}>
-        <Form.Control type="text" placeholder="이름을 입력해주세요." onChange={findsearch} />
-        </Col>
-    </Row>
+    <div className="boxsearch">
+        <Form.Control type="text" placeholder="검색어를 입력해주세요." onChange={findsearch} />
+    </div>
   )
 }
 

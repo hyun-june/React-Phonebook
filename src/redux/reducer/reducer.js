@@ -3,6 +3,11 @@ export const setSearchNow = (searchNow) => ({
   payload: searchNow
 });
 
+export const removeList = (id)=>({
+  type:"REMOVE_LIST",
+  payload: id
+})
+
 let initialState = {
   contactList: [],
   searchNow : ''
@@ -16,6 +21,10 @@ function reducer(state = initialState, action) {
   
     case "SEARCH_WORD":
       return{...state, searchNow:payload};
+
+    case "REMOVE_LIST":
+      const updateList = state.contactList.filter((contact) => contact.id !== payload)
+      return{...state,contactList:updateList}
 
   default:
       return { ...state };
