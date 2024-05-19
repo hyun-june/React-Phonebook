@@ -4,12 +4,12 @@ import {faMars, faVenus } from "@fortawesome/free-solid-svg-icons"
 import { Button, Form, ButtonGroup } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 
-const ContactForm = ({ handleClose }) => {
+const ContactForm = ({ handleClose, item }) => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [gender, setGender] = useState(null);
-  const dispatch = useDispatch();
   const [uploadImg, setupLoadimg] = useState(null);
+  const dispatch = useDispatch();
 
 
   const addContact = (event) => {
@@ -30,19 +30,24 @@ const ContactForm = ({ handleClose }) => {
     }
   };
 
-  const GeneralNum = (event) =>{
-    const value = event.target.value;
-    if (/^\d*$/.test(value) && value.length <= 12) {
-      setPhoneNumber(value);
-    }
-  }
-
   const GeneralName = (event) =>{
     const value = event.target.value;
     if(/^[^0-9]*$/.test(value)){
       setName(value);
     }
   }
+
+  const GeneralNum = (event) => {
+    let value = event.target.value.replace(/\D/g, ''); 
+    if (value.length > 3 && value.length <= 7) {
+      value = value.slice(0, 3) + '-' + value.slice(3);
+    } else if (value.length > 7) {
+      value = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7);
+    }
+    if (/^[\d-]*$/.test(value) && value.length <= 13) {
+      setPhoneNumber(value);
+    }
+  };
 
   const onChangeImg = (e) =>{
     const file = e.target.files[0];

@@ -1,140 +1,144 @@
 .title {
-    text-align: center;
-  }
-.container{
+  text-align: center;
+}
+
+.container {
   padding: 1em;
 }
-  
-  .parent-container {
-    text-align: center;
-  }
 
-  .maincontainer {
-    display: flex;
-    justify-content: center;
-    max-width: 800px;
-    height: 80vh; 
-    margin: 0 auto;
-    border: 3px solid red;
-  }
+.parent-container {
+  text-align: center;
+}
 
-  .male {
-    color: blue;
-  }
-  
-  .female {
-    color: red;
-  }
-  
-  .maleitemicon, .femaleitemicon {
-    position: relative;
-    top: 15px;
-    font-size: 20px;
-    background-color: white;
-    border: none;
-  }
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  height: 80vh;
+  margin: 0 auto;
+  border: 3px solid red;
+}
 
-  .maleitemicon{
-    color: blue;
-  }
+.male {
+  color: blue;
+}
 
-  .femaleitemicon{
-    color: red;
-  }
+.female {
+  color: red;
+}
+
+.maleitemicon,
+.femaleitemicon {
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+  background-color: white;
+  border: none;
+}
+
+.maleitemicon {
+  color: blue;
+}
+
+.femaleitemicon {
+  color: red;
+}
 
 
-  .male,
-  .female {
-    font-size: 20px;
-    background-color: white;
-    border: none;
-  }
-  
-  .male:hover {
-    background-color: blue;
-  }
-  
-  .male.active {
-    background-color: blue;
-  }
-  
-  .female:hover {
-    background-color: red;
-  }
-  
-  .female.active {
-    background-color: red;
-  }
-  
-  .formcontact {
-    border: 2px solid black;
-  }
-  
-  .listcontact {
-    border: 1px solid black;
-  }
+.male,
+.female {
+  font-size: 20px;
+  background-color: white;
+  border: none;
+}
 
-  .itemcontainer{
-    border-bottom: 1px solid purple;
-    margin: 0px;
-    padding: 0.2em;
-   }
- 
-  .boxsearch {
-    width: 13em;
-    position: relative;
-    left: 150px;
-  }
+.male:hover {
+  background-color: blue;
+}
 
-  .iconcontainer{
-    display: flex;
-    align-items: center;
-  }
+.male.active {
+  background-color: blue;
+}
 
-  .iconbtn{
-    border: none;
-    background-color: white;
-    color: black;
-  }
+.female:hover {
+  background-color: red;
+}
 
-  #uploadimg{
-    display: none;
-  }
+.female.active {
+  background-color: red;
+}
 
-  #selectImg {
-    cursor: pointer;
-    width: 100px; 
-    height: 38px;
-    padding: 6px 12px; 
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px; 
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-  }
-  
-  #selectImg:hover {
-    background-color: #0056b3;
-  }
+.formcontact {
+  border: 2px solid black;
+}
 
-  #addbtn{
-    border-radius: 10px;
-    width: 58px;
-    height: 38px;
-  }
-  .modal-btn {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-  
-  .uploaded-img{
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
+.listcontact {
+  border: 1px solid black;
+}
+
+.itemcontainer {
+  border-bottom: 1px solid purple;
+  margin: 0px;
+  padding: 0.2em;
+}
+
+.boxsearch {
+  width: 13em;
+  position: relative;
+  left: 150px;
+}
+
+.iconcontainer {
+  display: flex;
+  align-items: center;
+}
+
+.iconbtn {
+  border: none;
+  background-color: white;
+  color: black;
+}
+
+#uploadimg {
+  display: none;
+}
+
+#selectImg {
+  cursor: pointer;
+  width: 100px;
+  height: 38px;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+#selectImg:hover {
+  background-color: #0056b3;
+}
+
+#addbtn {
+  border-radius: 10px;
+  width: 58px;
+  height: 38px;
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.uploaded-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
