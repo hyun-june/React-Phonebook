@@ -5,7 +5,6 @@ import {setSearchNow} from "../redux/reducer/reducer.js"
 
 const SearchBox = () => {
   const dispatch = useDispatch();
-
   const findsearch = (event) =>{
     dispatch(setSearchNow(event.target.value));
   }

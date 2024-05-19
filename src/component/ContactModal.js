@@ -4,7 +4,6 @@ import ContactForm from "./ContactForm";
 
 const ContactFormModal = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 

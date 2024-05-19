@@ -9,6 +9,8 @@ const ContactForm = ({ handleClose }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [gender, setGender] = useState(null);
   const dispatch = useDispatch();
+  const [uploadImg, setupLoadimg] = useState(null);
+
 
   const addContact = (event) => {
     event.preventDefault();
@@ -20,9 +22,10 @@ const ContactForm = ({ handleClose }) => {
     } else if(name === ""){
       alert("이름을 입력해주세요.")
     } else {
-      dispatch({ type: "ADD_CONTACT", payload: { name, phoneNumber } });
+      dispatch({ type: "ADD_CONTACT", payload: { name, phoneNumber, gender, imageURL:uploadImg } });
       setName('');
       setPhoneNumber('');
+      setGender(null);
       handleClose();
     }
   };
@@ -41,6 +44,12 @@ const ContactForm = ({ handleClose }) => {
     }
   }
 
+  const onChangeImg = (e) =>{
+    const file = e.target.files[0];
+    const imgurl = URL.createObjectURL(file);
+    setupLoadimg(imgurl)
+  }
+
   return (
     <div className="formcontact">
       <Form onSubmit={addContact}>
@@ -57,8 +66,13 @@ const ContactForm = ({ handleClose }) => {
           <Button className={gender === 'male' ? 'male active': 'male'} onClick={() => setGender('male')} ><FontAwesomeIcon icon={faMars}/></Button>
           <Button className={gender === 'female' ? 'female active': 'female'} onClick={() => setGender('female')} ><FontAwesomeIcon icon={faVenus}/></Button>
         </ButtonGroup>
-        <div>
-        <Button variant="primary" type="submit">
+        <div className="modal-btn">
+        {uploadImg && <img src={uploadImg} alt="Uploaded" className="uploaded-img" />}
+        <label htmlFor="uploadimg" id="selectImg">
+          사진 추가
+        </label>
+        <input type="file" onChange={onChangeImg} id="uploadimg" accept="image/*" />
+        <Button variant="primary" type="submit" id="addbtn">
           추가
         </Button>
         </div>

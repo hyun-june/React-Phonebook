@@ -17,7 +17,7 @@ function reducer(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
     case "ADD_CONTACT":
-      return {...state, contactList: [...state.contactList,{ name: payload.name, phoneNumber: payload.phoneNumber },], };
+      return {...state, contactList: [...state.contactList,{id:state.contactList.length +1, name: payload.name, phoneNumber: payload.phoneNumber, gender:payload.gender, imageURL:payload.imageURL },], };
   
     case "SEARCH_WORD":
       return{...state, searchNow:payload};

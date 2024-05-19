@@ -1,6 +1,9 @@
 .title {
     text-align: center;
   }
+.container{
+  padding: 1em;
+}
   
   .parent-container {
     text-align: center;
@@ -14,7 +17,7 @@
     margin: 0 auto;
     border: 3px solid red;
   }
-  
+
   .male {
     color: blue;
   }
@@ -23,11 +26,27 @@
     color: red;
   }
   
+  .maleitemicon, .femaleitemicon {
+    position: relative;
+    top: 15px;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+  }
+
+  .maleitemicon{
+    color: blue;
+  }
+
+  .femaleitemicon{
+    color: red;
+  }
+
+
   .male,
   .female {
     font-size: 20px;
     background-color: white;
-    margin: 1em 0px;
     border: none;
   }
   
@@ -52,21 +71,70 @@
   }
   
   .listcontact {
-    border: 2px solid black;
-  }
-  
-  .boxsearch {
-    position: relative;
-    align-items: center;
-    width: 30em;
+    border: 1px solid black;
   }
 
-  .deletecontainer{
+  .itemcontainer{
+    border-bottom: 1px solid purple;
+    margin: 0px;
+    padding: 0.2em;
+   }
+ 
+  .boxsearch {
+    width: 13em;
+    position: relative;
+    left: 150px;
+  }
+
+  .iconcontainer{
     display: flex;
     align-items: center;
   }
 
-  #deletebtn{
+  .iconbtn{
     border: none;
     background-color: white;
+    color: black;
+  }
+
+  #uploadimg{
+    display: none;
+  }
+
+  #selectImg {
+    cursor: pointer;
+    width: 100px; 
+    height: 38px;
+    padding: 6px 12px; 
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px; 
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  #selectImg:hover {
+    background-color: #0056b3;
+  }
+
+  #addbtn{
+    border-radius: 10px;
+    width: 58px;
+    height: 38px;
+  }
+  .modal-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  .uploaded-img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
   }
