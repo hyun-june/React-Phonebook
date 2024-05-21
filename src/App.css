@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Jua&display=swap');
+
 .title {
   text-align: center;
 }
@@ -10,13 +12,29 @@
   text-align: center;
 }
 
+#mainicon{
+  width: 38px;
+  height: 38px;
+}
+
+.maintitle{
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .maincontainer {
   display: flex;
   justify-content: center;
-  max-width: 800px;
-  height: 80vh;
+  max-width: 400px;
+  max-height: 80vh;
   margin: 0 auto;
   border: 3px solid red;
+  overflow: hidden;
 }
 
 .male {
@@ -73,7 +91,10 @@
 }
 
 .listcontact {
+  margin-top: 10px;
   border: 1px solid black;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 .itemcontainer {
@@ -83,20 +104,48 @@
 }
 
 .boxsearch {
-  width: 13em;
+  width: 10em;
   position: relative;
-  left: 150px;
+  left: 2em;
 }
 
 .iconcontainer {
   display: flex;
   align-items: center;
+  padding: 0px;
 }
 
-.iconbtn {
+ .section-name{
+  font-size: 20px;
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+ }
+
+ .section-num{
+  font-size: 15px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+ }
+
+.editbtn {
+  border: none;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  position: relative;
+  left: 1em;
+  padding: 0px;
+  padding-right: 5px;
+}
+
+.iconbtn{
   border: none;
   background-color: white;
   color: black;
+  position: relative;
+  left: 2em;
 }
 
 #uploadimg {

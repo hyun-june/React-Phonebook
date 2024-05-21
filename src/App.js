@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import ContactForm from './component/ContactForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faAddressBook } from "@fortawesome/free-solid-svg-icons"
 import ContactModal from "./component/ContactModal";
 import ContactList from './component/ContactList';
 import SearchBox from './component/SearchBox';
@@ -17,19 +18,27 @@ function App() {
       <div className="maincontainer">
         <Container>
           <Row>
-            <Col>
-            <h1 className="title">연락처</h1></Col>
-          </Row>
-          <Row>
-            <Col>
+          <Col lg={2}>
+          <FontAwesomeIcon icon={faAddressBook} id="mainicon" />
+            </Col>
+            <Col lg={2} className="maintitle">
+            <div>주소록</div>
+            </Col>
+            <Col lg={6}>
               <SearchBox />
             </Col>
-            <Col >
-              <ContactModal />
+            <Col lg={2}>
+              <ContactModal/>
             </Col>
           </Row>
           <Row>
-            <Col lg={6}>
+            <Col>
+            <div>전체연락처</div>
+            {/* 여기에 contactlist.length 표시하기 */}
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={12}>
               <ContactList />
             </Col>
           </Row>

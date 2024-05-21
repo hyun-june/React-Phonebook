@@ -68,19 +68,19 @@ const ContactItem = ({ item }) => {
 
   return (
     <Row className="itemcontainer">
-      <Col lg={3}>
+      <Col lg={2}>
         <img width={50} src={item.imageURL || genderImg()} alt="" />
       </Col>
-      <Col lg={5}>
+      <Col lg={6}>
         {isEditing ? (
           <>
-            <input type="text" value={editName} onChange={handleNameChange} />
-            <input type="text" value={editPhoneNumber} onChange={handlePhoneNumberChange} />
+            <input type="text" value={editName} onChange={handleNameChange} className="section-name" />
+            <input type="text" value={editPhoneNumber} onChange={handlePhoneNumberChange} className="section-num" />
           </>
         ) : (
           <>
-            <div>{item.name}</div>
-            <div>{item.phoneNumber}</div>
+            <div className="section-name">{item.name}</div>
+            <div className="section-num">{item.phoneNumber}</div>
           </>
         )}
       </Col>
@@ -94,21 +94,25 @@ const ContactItem = ({ item }) => {
       <Col lg={1} className="iconcontainer">
         {isEditing ? (
           <>
-            <button className="iconbtn" onClick={handleSave}>
+            <button className="editbtn" onClick={handleSave}>
               Save
             </button>
-            <button className="iconbtn" onClick={handleCancel}>
+            <button className="editbtn" onClick={handleCancel}>
               Cancel
             </button>
           </>
         ) : (
+          <>          
           <button className="iconbtn" onClick={handleEdit}>
             <FontAwesomeIcon icon={faPen} />
           </button>
-        )}
-        <button className="iconbtn" onClick={handleRemove}>
+
+          <button className="iconbtn" onClick={handleRemove}>
           <FontAwesomeIcon icon={faTrash} />
-        </button>
+          </button>
+        </>
+        )}
+        
       </Col>
     </Row>
   );
