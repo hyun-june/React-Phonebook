@@ -15,6 +15,7 @@
 #mainicon{
   width: 38px;
   height: 38px;
+  color: #cbb1d4;
 }
 
 .maintitle{
@@ -30,11 +31,13 @@
 .maincontainer {
   display: flex;
   justify-content: center;
-  max-width: 400px;
-  max-height: 80vh;
+  width: 400px;
+  height: 70vh;
   margin: 0 auto;
-  border: 3px solid red;
+  border: 3px solid #cbb1d4;
   overflow: hidden;
+  position: relative;
+  top: 2em;
 }
 
 .male {
@@ -92,13 +95,13 @@
 
 .listcontact {
   margin-top: 10px;
-  border: 1px solid black;
+  border: 1px dashed #cbb1d4;
   max-height: 70vh;
   overflow-y: auto;
 }
 
 .itemcontainer {
-  border-bottom: 1px solid purple;
+  border-bottom: 1px dashed #cbb1d4;
   margin: 0px;
   padding: 0.2em;
 }
@@ -191,3 +194,17 @@
   margin-right: 10px;
 }
 
+#plusbtn {
+  background-color: #7ea0ff;
+  border: none;
+}
+
+#plusbtn:hover{
+  background-color: #5347cd;
+}
+
+#numsection{
+  border-bottom: 1px solid #cbb1d4;
+  padding-bottom: 0.5em;
+  margin-top: 0.5em;
+}

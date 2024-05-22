@@ -68,10 +68,10 @@ const ContactItem = ({ item }) => {
 
   return (
     <Row className="itemcontainer">
-      <Col lg={2}>
+      <Col xs={2} className="imgsection">
         <img width={50} src={item.imageURL || genderImg()} alt="" />
       </Col>
-      <Col lg={6}>
+      <Col xs={6}>
         {isEditing ? (
           <>
             <input type="text" value={editName} onChange={handleNameChange} className="section-name" />
@@ -84,14 +84,14 @@ const ContactItem = ({ item }) => {
           </>
         )}
       </Col>
-      <Col lg={1}>
+      <Col xs={1}>
         {item.gender === 'male' ? (
           <FontAwesomeIcon icon={faMars} className="maleitemicon" />
         ) : item.gender === 'female' ? (
           <FontAwesomeIcon icon={faVenus} className="femaleitemicon" />
         ) : null}
       </Col>
-      <Col lg={1} className="iconcontainer">
+      <Col xs={1} className="iconcontainer">
         {isEditing ? (
           <>
             <button className="editbtn" onClick={handleSave}>

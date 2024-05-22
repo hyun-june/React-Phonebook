@@ -9,7 +9,7 @@ const ContactFormModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button onClick={handleShow} id="plusbtn">
         +
       </Button>
 
