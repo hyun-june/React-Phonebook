@@ -71,7 +71,7 @@ const ContactItem = ({ item }) => {
       <Col xs={2} className="imgsection">
         <img width={50} src={item.imageURL || genderImg()} alt="" />
       </Col>
-      <Col xs={6}>
+      <Col xs={6} className="mainsection">
         {isEditing ? (
           <>
             <input type="text" value={editName} onChange={handleNameChange} className="section-name" />

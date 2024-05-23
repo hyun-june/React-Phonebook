@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Jua&display=swap');
 
-.title {
-  text-align: center;
-}
-
+/* App.js */
 .container {
   padding: 1em;
 }
 
-.parent-container {
-  text-align: center;
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 70vh;
+  margin: 0 auto;
+  border: 3px solid #cbb1d4;
+  overflow: hidden;
+  position: relative;
+  top: 2em;
 }
+
 
 #mainicon{
   width: 38px;
@@ -28,16 +34,23 @@
   justify-content: center;
 }
 
-.maincontainer {
-  display: flex;
-  justify-content: center;
-  width: 400px;
-  height: 70vh;
-  margin: 0 auto;
-  border: 3px solid #cbb1d4;
-  overflow: hidden;
-  position: relative;
-  top: 2em;
+#numsection{
+  border-bottom: 1px solid #cbb1d4;
+  padding-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+/* ContactForm.js--------------------------------------------- */
+
+.formcontact {
+  border: 2px solid #cbb1d4;
+}
+
+.male,
+.female {
+  font-size: 20px;
+  background-color: white;
+  border: none;
 }
 
 .male {
@@ -47,6 +60,40 @@
 .female {
   color: red;
 }
+
+.male:hover, .male.active {
+  background-color: blue;
+}
+
+.female:hover, .female.active {
+  background-color: red;
+}
+
+/* ContactItem.js--------------------------------------------- */
+
+.itemcontainer {
+  border-bottom: 1px dashed #cbb1d4;
+  margin: 0px;
+  padding: 0.2em;
+}
+
+.section-name{
+  font-size: 20px;
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  width: 180px;
+  height: 28px;
+ }
+
+ .section-num{
+  font-size: 15px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 180px;
+  height: 28px;
+ }
 
 .maleitemicon,
 .femaleitemicon {
@@ -65,72 +112,11 @@
   color: red;
 }
 
-
-.male,
-.female {
-  font-size: 20px;
-  background-color: white;
-  border: none;
-}
-
-.male:hover {
-  background-color: blue;
-}
-
-.male.active {
-  background-color: blue;
-}
-
-.female:hover {
-  background-color: red;
-}
-
-.female.active {
-  background-color: red;
-}
-
-.formcontact {
-  border: 2px solid black;
-}
-
-.listcontact {
-  margin-top: 10px;
-  border: 1px dashed #cbb1d4;
-  max-height: 70vh;
-  overflow-y: auto;
-}
-
-.itemcontainer {
-  border-bottom: 1px dashed #cbb1d4;
-  margin: 0px;
-  padding: 0.2em;
-}
-
-.boxsearch {
-  width: 10em;
-  position: relative;
-  left: 2em;
-}
-
 .iconcontainer {
   display: flex;
   align-items: center;
   padding: 0px;
 }
-
- .section-name{
-  font-size: 20px;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: bold;
-  font-style: normal;
- }
-
- .section-num{
-  font-size: 15px;
-  font-family: "IBM Plex Sans KR", sans-serif;
-  font-weight: 400;
-  font-style: normal;
- }
 
 .editbtn {
   border: none;
@@ -138,7 +124,7 @@
   background-color: white;
   color: black;
   position: relative;
-  left: 1em;
+  left: 3px;
   padding: 0px;
   padding-right: 5px;
 }
@@ -148,7 +134,36 @@
   background-color: white;
   color: black;
   position: relative;
-  left: 2em;
+  left: 1em;
+}
+
+.imgsection{
+  padding: 0px;
+}
+
+.mainsection{
+  padding: 0px;
+}
+
+
+/* ContactList.js--------------------------------------------- */
+
+.listcontact {
+  margin-top: 10px;
+  border: 1px dashed #cbb1d4;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* ContactModal.js--------------------------------------------- */
+
+#plusbtn {
+  background-color: #7ea0ff;
+  border: none;
+}
+
+#plusbtn:hover{
+  background-color: #5347cd;
 }
 
 #uploadimg {
@@ -194,17 +209,11 @@
   margin-right: 10px;
 }
 
-#plusbtn {
-  background-color: #7ea0ff;
-  border: none;
+/* SearchBox.js--------------------------------------------- */
+
+.boxsearch {
+  width: 10em;
+  position: relative;
+  left: 2em;
 }
 
-#plusbtn:hover{
-  background-color: #5347cd;
-}
-
-#numsection{
-  border-bottom: 1px solid #cbb1d4;
-  padding-bottom: 0.5em;
-  margin-top: 0.5em;
-}
